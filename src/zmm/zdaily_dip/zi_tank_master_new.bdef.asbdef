@@ -1,0 +1,48 @@
+managed implementation in class zbp_i_tank_master_new unique;
+strict ( 2 );
+
+define behavior for ZI_TANK_MASTER_NEW alias Master
+persistent table ztank_master_new
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  field ( mandatory : create )
+   Plant, Product, Tankno;
+
+  field ( readonly : update )
+   Plant, Product, Tankno;
+
+ field ( readonly ) Storagelocationname, Materialdescription, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+determination getStorageLocations on modify { field Plant, Tankno; }
+determination getMaterialDescription on modify { field Product; }
+
+validation validatePlant on save { field Plant; }
+validation validateTankno on save { field Tankno; }
+validation validateProduct on save { field Product; }                                    // NOT WORKING
+validation validateCapacity on save { field Tanksafecapacity, Tankmaximumcapacity; }
+
+   mapping for ztank_master_new
+  {
+    Plant = plant;
+    Tankno = storagelocation;
+    Storagelocationname = storagelocationname;
+    Product = material;
+    Materialdescription = materialdescription;
+    Validitystartdate = validitystartdate;
+    Validityenddate = validityenddate;
+    Tankmaximumcapacity = tankmaximumcapacity;
+    Tanksafecapacity = tanksafecapacity;
+    Capacitytype = capacitytype;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+
+}

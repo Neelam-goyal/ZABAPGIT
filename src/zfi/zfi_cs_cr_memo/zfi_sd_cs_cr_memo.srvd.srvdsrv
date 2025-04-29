@@ -1,0 +1,4 @@
+@EndUserText.label: 'SD of ZFI_CS_CR_MEMO'
+define service ZFI_SD_CS_CR_MEMO {
+  expose ZFI_CDS_CS_CR_MEMO;
+}

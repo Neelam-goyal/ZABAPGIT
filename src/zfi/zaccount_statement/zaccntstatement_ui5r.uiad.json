@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Account Statement",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "accountstatement"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A87F4BFBF298B1F240C3C8CFE817986B2C2F5097_TM",
+    "semanticObject": "account_statement",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A87F4BFBF298B1F240C3C8CFE817986B2C2F5097_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Account Statement",
+        "subtitle": "zacct_statement"
+      }
+    }
+  ]
+}

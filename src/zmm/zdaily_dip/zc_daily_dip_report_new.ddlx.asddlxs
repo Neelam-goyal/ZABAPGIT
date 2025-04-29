@@ -1,0 +1,152 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Plant'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Plant'
+annotate entity ZC_DAILY_DIP_REPORT
+    with 
+{
+     @EndUserText.label: 'Plant'
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10
+  } ]
+  @UI.lineItem: [ {
+    position: 10
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  Plant;
+  
+   @EndUserText.label: 'Product'
+  @UI.identification: [ { position: 20 , label: 'Product' } ]
+  @UI.lineItem: [ { position: 20 , label: 'Product' } ]
+  @UI.selectionField: [ { position: 20 } ]
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_TANK_MASTER_NEW', element: 'Material' } }]
+  Product;
+
+  @EndUserText.label: 'SAP Tank No'
+  @UI.identification: [ { position: 30 , label: 'SAP Tank No' } ]
+  @UI.lineItem: [ { position: 30 , label: 'SAP Tank No' } ]
+  @UI.selectionField: [ { position: 30 } ]
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_TANK_MASTER_NEW', element: 'Storagelocation' },
+  //   additionalBinding: [ {
+  //                         localElement: 'Tankdescription',
+  //                         element: 'Storagelocationname',
+  //                         usage:#FILTER_AND_RESULT
+  //                         },
+  //                       {
+  //                         localElement: 'Tanksafecapacity',
+  //                         element: 'Tanksafecapacity',
+  //                         usage:#FILTER_AND_RESULT
+  //                       }
+  //                         ] } ]
+  Tankno;
+  
+   @EndUserText.label: 'Date'
+  @UI.identification: [ { position: 40 , label: 'Date' } ]
+  @UI.lineItem: [ { position: 40 , label: 'Date' } ]
+  @UI.selectionField: [ { position: 40 } ]
+  Pdate;
+
+  @EndUserText.label: 'Tank Description'
+  @UI.identification: [ { position: 50 , label: 'Tank Description' } ]
+  @UI.lineItem: [ { position: 50 , label: 'Tank Description' } ]
+  //  @UI.selectionField: [ { position: 50 } ]
+  Tankdescription;
+
+  @EndUserText.label: 'Tank Safe Cap MT'
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Tank Safe Cap MT'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'Tank Safe Cap MT'
+  } ]
+  //  @UI.selectionField: [ {
+  //    position: 60
+  //  } ]
+  Tanksafecapacity;
+
+  @EndUserText.label: 'Tank Dip CM'
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Tank Dip CM'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'Tank Dip CM'
+  } ]
+  //  @UI.selectionField: [ {
+  //    position: 70
+  //  } ]
+  Tankdipcm;
+
+  @EndUserText.label: 'Qty MT'
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Qty MT'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 ,
+    label: 'Qty MT'
+  } ]
+  //  @UI.selectionField: [ {
+  //    position: 80
+  //  } ]
+  Qtymt;
+
+  @EndUserText.label: 'Parcel to be Unloaded'
+  @UI.identification: [ {
+    position: 90 ,
+    label: 'Parcel to be Unloaded'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 ,
+    label: 'Parcel to be Unloaded'
+  } ]
+  //  @UI.selectionField: [ {position: 90 } ]
+  Parcelunloaded;
+
+  @EndUserText.label: 'Qty to be Unloaded'
+  @UI.identification: [ { position: 100 , label: 'Qty to be Unloaded'} ]
+  @UI.lineItem: [ {position: 100 , label: 'Qty to be Unloaded'} ]
+  //  @UI.selectionField: [ {position: 100 } ]
+  Qtyunloaded;
+
+  @EndUserText.label: 'Total Available Stock'
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'Total Available Stock'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 ,
+    label: 'Total Available Stock'
+  } ]
+  //  @UI.selectionField: [ {
+  //    position: 110
+  //  } ]
+  Totalavlstock;
+
+  @EndUserText.label: 'Tank SAP Book Stock @Dip Time'
+  @UI.identification: [ {position: 120 , label: 'Tank SAP Book Stock @Dip Time'} ]
+  @UI.lineItem: [ {position: 120 , label: 'Tank SAP Book Stock @Dip Time'} ]
+  //  @UI.selectionField: [ {position: 120 } ]
+  //  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_SAP_BOOK_VH_DI', element: 'StockQuantity' } }]
+  Bookstock; //diptime;
+
+  @EndUserText.label: 'Variance'
+  @UI.identification: [ {position: 130 , label: 'Variance'} ]
+  @UI.lineItem: [ {position: 130 , label: 'Variance'} ]
+  //  @UI.selectionField: [ { position: 130 } ]
+  Variance;
+    
+}

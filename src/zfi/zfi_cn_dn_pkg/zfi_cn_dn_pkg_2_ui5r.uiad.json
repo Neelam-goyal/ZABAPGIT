@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZCN_DN_FI",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zcndnfi"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_326CFC9EB5E4B57D86C541271EE64F34D0519C63_TM",
+    "semanticObject": "zfi_cn_dn_So",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_326CFC9EB5E4B57D86C541271EE64F34D0519C63_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZCN_DN_FI",
+        "subtitle": "Credit Debit Note"
+      }
+    }
+  ]
+}

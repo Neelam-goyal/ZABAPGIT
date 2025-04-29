@@ -1,0 +1,4 @@
+@EndUserText.label: 'Vendor Trial Balance'
+define service ZSD_VendorTrial {
+  expose ZSupplierTrial;
+}

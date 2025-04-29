@@ -1,0 +1,122 @@
+@Metadata.layer: #PARTNER
+@UI: {
+  headerInfo: {
+    typeName: 'GateBillingLines', 
+    typeNamePlural: 'GateBillingLines', 
+    title: {
+      type: #STANDARD, 
+      label: 'GateBillingLines', 
+      value: 'Billingdocument'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Billingdocument', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+
+annotate entity ZC_BILLINGLINES
+    with 
+{
+    @UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'BILLINGDOCUMENT', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  }, 
+  {
+    id: 'Billingdocument', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Billingdocument', 
+    position: 30 , 
+    targetElement: 'Billingdocument'
+  } ]
+  
+  @UI.lineItem: [ {
+    position: 10 , 
+      label: 'Billingdocument',
+      type: #FOR_ACTION,
+      dataAction: 'cancelMultiple',
+      invocationGrouping: #CHANGE_SET,
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'Billingdocument'
+   } ]
+  @UI.selectionField: [ {
+    position: 10   
+  } ]
+  Billingdocument;
+
+  @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'Billingdocumentitem'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Billingdocumentitem'
+  } ]
+  Billingdocumentitem;
+  
+    @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Plant'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Plant'
+  } ]
+  Plant;
+  
+    
+    @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Gateentryno'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Gateentryno'
+  } ]
+  Gateentryno;
+  
+    
+    @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Product'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Product'
+  } ]
+  Product;
+  
+    
+    @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Billingquantity'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Billingquantity'
+  } ]
+  Billingquantity;
+    
+}

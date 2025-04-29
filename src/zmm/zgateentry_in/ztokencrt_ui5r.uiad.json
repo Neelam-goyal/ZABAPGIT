@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Token Create",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "ztokencrt"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_BC6F4A3473CC49B862CCEFA089C80AE599F9D75A_TM",
+    "semanticObject": "ZTOKENCRT",
+    "action": "Maintain",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_BC6F4A3473CC49B862CCEFA089C80AE599F9D75A_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Token Create",
+        "subtitle": "ZTOKENCRT"
+      }
+    }
+  ]
+}

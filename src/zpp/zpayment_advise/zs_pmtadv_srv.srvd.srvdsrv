@@ -1,0 +1,8 @@
+@EndUserText.label: 'Payment Advise Service'
+@ObjectModel.leadingEntity.name: 'ZC_PMTADVHEADER'
+define service ZS_PMTADV_SRV {
+  expose ZC_PMTADVHEADER as PmtAdvHeader;
+  expose ZC_PMTADVBDSUMM as PmtAdvBDSumm;
+  expose ZC_PMTADVDEDUCT as PmtAdvDeduct;
+  expose I_UnitOfMeasure as UnitOfMeasure;
+}

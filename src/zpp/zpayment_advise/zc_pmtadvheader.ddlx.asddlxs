@@ -1,0 +1,395 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'PaymentAdviseHeader', 
+    typeNamePlural: 'PaymentAdviseHeader', 
+    title: {
+      type: #STANDARD, 
+      label: 'PaymentAdviseHeader', 
+      value: 'PaymentAdviseNumber'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'PaymentAdviseNumber', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate entity ZC_PMTADVHEADER
+    with 
+{
+@UI.facet: [ {
+    id: 'idCollection', 
+    type: #COLLECTION, 
+    label: 'Payment Advise', 
+    position: 10 
+  }, 
+  {
+    id: 'idIdentification', 
+    parentId: 'idCollection', 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'General Information', 
+    position: 20 
+  },
+  {
+    id: 'idadvancelicimport', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Bardana Summary', 
+    position: 30 , 
+    targetElement: '_PmtAmtBDSumm'
+  }, 
+  {
+    id: 'idadvancelicexport', 
+    type: #LINEITEM_REFERENCE, 
+    label: 'Deduction Summary', 
+    position: 40 , 
+    targetElement: '_PmtAmtDeduct'
+  } ]
+  
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'Payment Advise'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Payment Advise'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+      PaymentAdviseNumber;
+      
+        @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'GRN'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'GRN'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+    GRNNumber;
+    
+     @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'GRN Date'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'GRN Date'
+  } ]
+    GRNDate;
+     
+  @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Due Date'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Due Date'
+  } ]
+    DueDate;
+    
+     @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Inspection Lot'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Inspection Lot'
+  } ]
+    InspectionLot;
+    
+    @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Broker Name'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Broker Name'
+  } ]
+    BrokerName;
+    
+    @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Supplier Name'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Supplier Name'
+  } ]
+    SupplierName;
+    
+    @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Bargain No.'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Bargain No.'
+  } ]
+    BargainNumber;
+    
+    @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Bargain Date'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Bargain Date'
+  } ]
+    BargainDate;
+    
+    @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'PO No.'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'PO No.'
+  } ]
+    PONumber;
+    
+     @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Place'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Place'
+  } ]
+    Place;
+    
+    @UI.lineItem: [ {
+    position: 120 , 
+    importance: #HIGH, 
+    label: 'Invoice Number'
+  } ]
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Invoice Number'
+  } ]
+    InvoiceNumber;
+    
+    @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH, 
+    label: 'Vehicle Number'
+  } ]
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Vehicle Number'
+  } ]
+    VehicleNumber;
+    
+    @UI.lineItem: [ {
+    position: 140 , 
+    importance: #HIGH, 
+    label: 'Invoice Date'
+  } ]
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Invoice Date'
+  } ]
+    InvoiceDate;
+    
+//    @UI.lineItem: [ {
+//    position: 150 , 
+//    importance: #HIGH, 
+//    label: 'Material'
+//  } ]
+//  @UI.identification: [ {
+//    position: 150 , 
+//    label: 'MaterIAL'
+//  } ]
+//    material;
+    
+//    @UI.lineItem: [ {
+//    position: 160 , 
+//    importance: #HIGH, 
+//    label: 'Invoiced Bags'
+//  } ]
+//  @UI.identification: [ {
+//    position: 160 , 
+//    label: 'Invoiced Bags'
+//  } ]
+//    invoicedbags;
+    
+//    @UI.lineItem: [ {
+//    position: 170 , 
+//    importance: #HIGH, 
+//    label: 'Received Bags'
+//  } ]
+//  @UI.identification: [ {
+//    position: 170 , 
+//    label: 'Received Bags'
+//  } ]
+//    receivedbags;
+    
+//    @UI.lineItem: [ {
+//    position: 180 , 
+//    importance: #HIGH, 
+//    label: 'Invoice Weight'
+//  } ]
+//  @UI.identification: [ {
+//    position: 180 , 
+//    label: 'Invoice Weight'
+//  } ]
+//    invoiceweight;
+    
+//    @UI.lineItem: [ {
+//    position: 190 , 
+//    importance: #HIGH, 
+//    label: 'Received Weight'
+//  } ]
+//  @UI.identification: [ {
+//    position: 190 , 
+//    label: 'Received Weight'
+//  } ]
+//    receivedweight;
+    
+//    @UI.lineItem: [ {
+//    position: 200 , 
+//    importance: #HIGH, 
+//    label: 'Short Weight'
+//  } ]
+//  @UI.identification: [ {
+//    position: 200 , 
+//    label: 'Short Weight'
+//  } ]
+//    shortweight;
+    
+//    @UI.lineItem: [ {
+//    position: 210 , 
+//    importance: #HIGH, 
+//    label: 'MS Net Weight'
+//  } ]
+//  @UI.identification: [ {
+//    position: 210 , 
+//    label: 'MS Net Weight'
+//  } ]
+//    msnetweight;
+    
+//    @UI.lineItem: [ {
+//    position: 220 , 
+//    importance: #HIGH, 
+//    label: 'Invoice Rate'
+//  } ]
+//  @UI.identification: [ {
+//    position: 220 , 
+//    label: 'Invoice Rate'
+//  } ]
+//    invoicerate;
+    
+//    @UI.lineItem: [ {
+//    position: 230 , 
+//    importance: #HIGH, 
+//    label: 'Invoiced Taxable Amount'
+//  } ]
+//  @UI.identification: [ {
+//    position: 230 , 
+//    label: 'Invoiced Taxable Amount'
+//  } ]
+//    invoicetaxableamount;
+    
+//    @UI.lineItem: [ {
+//    position: 240 , 
+//    importance: #HIGH, 
+//    label: 'Received Gross'
+//  } ]
+//  @UI.identification: [ {
+//    position: 240 , 
+//    label: 'Received Gross'
+//  } ]
+//    receivedgross;
+    
+//    @UI.lineItem: [ {
+//    position: 250 , 
+//    importance: #HIGH, 
+//    label: 'Received Tare'
+//  } ]
+//  @UI.identification: [ {
+//    position: 250 , 
+//    label: 'Received Tare'
+//  } ]
+//    receivedtare;
+    
+//    @UI.lineItem: [ {
+//    position: 260 , 
+//    importance: #HIGH, 
+//    label: 'Received Net'
+//  } ]
+//  @UI.identification: [ {
+//    position: 260 , 
+//    label: 'Received Net'
+//  } ]
+//    receivednet;
+    
+//    @UI.lineItem: [ {
+//    position: 270 , 
+//    importance: #HIGH, 
+//    label: 'Invoice Currency'
+//  } ]
+//  @UI.identification: [ {
+//    position: 270 , 
+//    label: 'Invoice Currency'
+//  } ]
+//    invoicecurrency;
+    
+//    @UI.lineItem: [ {
+//    position: 280 , 
+//    importance: #HIGH, 
+//    label: 'Invoice Bags UOM'
+//  } ]
+//  @UI.identification: [ {
+//    position: 280 , 
+//    label: 'Invoice Bags UOM'
+//  } ]
+//    invoicebagsuom;
+    
+//    @UI.lineItem: [ {
+//    position: 290 , 
+//    importance: #HIGH, 
+//    label: 'Invoice Weight UOM'
+//  } ]
+//  @UI.identification: [ {
+//    position: 290 , 
+//    label: 'Invoice Weight UOM'
+//  } ]
+//    invoiceweightuom;
+    
+    @UI.hidden: true
+    CreatedBy;
+    @UI.hidden: true
+    CreatedAt;
+     @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 300 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 300 
+  } ]
+    LastChangedBy;
+    @UI.hidden: true
+    LastChangedAt;  
+    @UI.hidden: true
+    LocalLastChangedAt;  
+}

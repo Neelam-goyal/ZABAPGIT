@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definations for history card'
+define service ZHISTORY_CARD_SD {
+  expose ZHISTORY_CARD_CDS;
+}

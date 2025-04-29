@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Daily Dip Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zdipreportnewodatav4"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5855E914B2BBB3FD7269F1160A12CA6E5CBF9E2C_TM",
+    "semanticObject": "zdip_report_so_v4",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5855E914B2BBB3FD7269F1160A12CA6E5CBF9E2C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Daily Dip Report",
+        "subtitle": "ZDip_Report"
+      }
+    }
+  ]
+}

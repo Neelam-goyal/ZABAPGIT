@@ -1,0 +1,123 @@
+managed;
+strict ( 2 );
+
+define behavior for ZR_PMTADVHEADER alias PMTADVHEADER
+implementation in class zbp_r_pmtadvheader unique
+persistent table zpmtadvheader
+lock master
+etag master LastChangedAt
+authorization master ( global )
+{
+
+   field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedAt;
+
+   field ( readonly : update )
+   PaymentAdviseNumber;
+
+  create;
+  update;
+  delete;
+
+  mapping for zpmtadvheader
+  {
+    PaymentAdviseNumber = pmtadvno;
+    BargainDate = bargaindate;
+    BargainNumber = bargainno;
+    BrokerName = brokername;
+    CreatedAt = created_at;
+    CreatedBy= created_by;
+    DueDate = duedate;
+    GRNDate =grndate;
+    GRNNumber = grnno;
+    InspectionLot = inspectionlot;
+    InvoiceDate = invoicedate;
+    InvoiceNumber= invoiceno;
+    LastChangedAt = last_changed_at;
+    LastChangedBy = last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    PONumber = ponumber;
+    Place  = place;
+    SupplierName = suppliername;
+    VehicleNumber = vehicleno;
+  }
+
+//  mapping for zpmtadvmtsumm
+//  {
+//    Material = material;
+//
+//  }
+
+  association _PmtAmtBDSumm { create; }
+  association _PmtAmtDeduct { create; }
+}
+
+define behavior for ZR_PMTADVBDSUMM alias PMTADVBDSUMM
+persistent table zpmtadvbdsumm
+early numbering
+etag master LocalLastChangedAt
+lock dependent by _PmtAdvHeader
+authorization dependent by _PmtAdvHeader
+{
+  field ( readonly ) PaymentAdviseNumber;
+  update;
+  delete;
+
+  mapping for zpmtadvbdsumm
+  {
+  ItemNo= itemno;
+  BDNetWeight = bdnwt;
+  BDNetWeightUOM = bdnwtuom;
+  BDUnitWeight = bdnunitwt;
+  BDUnitWeightUOM = bdnunitwtuom;
+  BagsUOM = bagsuom;
+  MSNetWeight = msnetwt;
+  MSNetWeightUOM = mswtuom;
+  Material = material;
+  PaymentAdviseNumber = pmtadvno;
+  ReceivedBags = rcvdbags;
+  WeightPerBag = wtperbag;
+  WeightPerBaguom = wtperbaguom;
+   CreatedAt = created_at;
+    CreatedBy= created_by;
+    LastChangedAt = last_changed_at;
+    LastChangedBy = last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+
+  association _PmtAdvHeader;
+}
+
+define behavior for ZR_PMTADVDEDUCT alias PMTADVDEDUCT
+persistent table zpmtadvdeduct
+early numbering
+lock dependent by _PmtAdvHeader
+authorization dependent by _PmtAdvHeader
+etag master LocalLastChangedAt
+{
+  field ( readonly ) PaymentAdviseNumber;
+  update;
+  delete;
+
+  mapping for zpmtadvdeduct
+  {
+  ItemNo= itemno;
+      Actual = actual;
+      ConditionNumber = cond;
+      Currency = currency;
+      DeductionAmount = deducamt;
+      Difference = diff;
+      Final = final;
+      Particulars = particulars;
+      Type = type;
+      PaymentAdviseNumber = pmtadvno;  CreatedAt = created_at;
+        CreatedBy= created_by;
+        LastChangedAt = last_changed_at;
+        LastChangedBy = last_changed_by;
+        LocalLastChangedAt = local_last_changed_at;
+  }
+
+  association _PmtAdvHeader;
+}

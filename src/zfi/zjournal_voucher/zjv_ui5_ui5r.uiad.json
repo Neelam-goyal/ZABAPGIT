@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Journal Voucher",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zjournalvoucher"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_94715587917A11001F8FE66EE52F3BA65AECA943_TM",
+    "semanticObject": "zjv_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_94715587917A11001F8FE66EE52F3BA65AECA943_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Journal Voucher",
+        "subtitle": "ZJV"
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "zap_invoice",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zapinvoice1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_4D2D4737F9CD85E8851B581D62A81C8D78980CB3_TM",
+    "semanticObject": "zap_invoice_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_4D2D4737F9CD85E8851B581D62A81C8D78980CB3_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "zap_invoice",
+        "subtitle": "AP Invoice Form"
+      }
+    }
+  ]
+}

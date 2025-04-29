@@ -1,0 +1,4 @@
+@EndUserText.label: 'PURCHASE ORDER SERVICE DEFINATION'
+define service Zsrv_def_PO {
+  expose ZCDS_po;
+}

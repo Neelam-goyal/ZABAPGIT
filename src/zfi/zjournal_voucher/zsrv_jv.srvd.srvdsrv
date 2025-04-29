@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Journal Voucher'
+define service ZSRV_JV {
+  expose ZCDS_JV;
+}

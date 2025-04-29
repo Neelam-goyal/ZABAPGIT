@@ -1,0 +1,47 @@
+managed implementation in class ZRAPBP_R_PRODUCT_TABLE unique;
+strict ( 2 );
+with draft;
+define behavior for ZRAPR_PRODUCT_TABLE alias ZraprProductTable
+persistent table ZPRODUCT_TABLE
+draft table ZRAPPRDCT_TBLE_D
+etag master LastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Product;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt;
+
+  field ( readonly : update )
+   Product;
+
+
+//   determination SetProductDescription on modify { field Product; }
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZPRODUCT_TABLE
+  {
+    Product = product;
+    ProductDescription = product_description;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

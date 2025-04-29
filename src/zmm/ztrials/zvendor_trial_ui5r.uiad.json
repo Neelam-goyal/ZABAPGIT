@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Vendor Trial Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zvendortrial"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_E2EC5935DF837B02EF44DF27C9EA4BB6E727AE9A_TM",
+    "semanticObject": "zvendor_trial_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_E2EC5935DF837B02EF44DF27C9EA4BB6E727AE9A_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Vendor Trial Report",
+        "subtitle": "zvendor"
+      }
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Bardana Summary', 
+    typeNamePlural: 'Bardana Summary', 
+    title: {
+      type: #STANDARD, 
+      label: 'Bardana Summary', 
+      value: 'Material'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Material', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate entity ZC_PMTADVBDSUMM
+    with 
+{
+@UI.facet: [ {
+    id: 'idBDSUMM', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Bardana Summary', 
+    position: 10 
+  } ]
+  
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'Payment Advise'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Payment Advise'   
+  } ]
+   PaymentAdviseNumber;
+   
+       
+    @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 140 , 
+    importance: #HIGH, 
+    label: 'Item No'
+  } ]
+  @UI.identification: [ {
+    position: 140 , 
+    label: 'Item No'   
+  } ]
+    ItemNo;
+   
+     @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'Material'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Material'
+  } ]
+   Material;
+   
+     @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Received Bags'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Received Bags'
+  } ]
+   ReceivedBags;
+   
+   @UI.hidden: true
+     @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Bags UOM'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Bags UOM'
+  } ]
+   BagsUOM;
+   
+     
+  @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'BD Unit Weight'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'BD Unit Weight'
+  } ]
+   BDUnitWeight;
+   
+   @UI.hidden: true
+   @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'BD Unit Weight UOM'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'BD Unit Weight UOM'
+  } ]
+   BDUnitWeightUOM;
+   
+     @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'BD Net Weight'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'BD Net Weight'
+  } ]
+   BDNetWeight;
+   
+   @UI.hidden: true
+    @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'BD Net Weight UOM'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'BD Net Weight UOM'
+  } ]
+   BDNetWeightUOM;
+   
+      @UI.hidden: true
+    @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Weight Per Bag'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Weight Per Bag'
+  } ]
+   WeightPerBag;
+   
+   @UI.hidden: true
+    @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH, 
+    label: 'Weight Per Bag UOM'
+  } ]
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Weight Per Bag UOM'
+  } ]
+   WeightPerBagUOM;
+   
+   @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'MS Net Weight'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'MS Net Weight'
+  } ]
+   MSNetWeight;
+   
+   @UI.hidden: true
+    @UI.lineItem: [ {
+    position: 120 , 
+    importance: #HIGH, 
+    label: 'MS Net Weight UOM'
+  } ]
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'MS Net Weight UOM'
+  } ]
+   MSNetWeightUOM;
+   
+    @UI.hidden: true
+    CreatedBy;
+    @UI.hidden: true
+    CreatedAt;
+     @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 130 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 130 
+  } ]
+    LastChangedBy;
+    @UI.hidden: true
+    LastChangedAt;  
+    @UI.hidden: true
+    LocalLastChangedAt;  
+    
+}

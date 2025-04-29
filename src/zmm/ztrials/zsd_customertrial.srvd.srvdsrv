@@ -1,0 +1,4 @@
+@EndUserText.label: 'Customer Trial Balance'
+define service ZSD_CustomerTrial {
+  expose ZCustomerTrial;
+}

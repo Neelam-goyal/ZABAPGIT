@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Vehicle Fitness Check",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zvehiclefitnesscheck"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_183870928584311626756226A294E37BBD603F37_TM",
+    "semanticObject": "zvehiclefitnesscheck",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_183870928584311626756226A294E37BBD603F37_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Vehicle Fitness Check",
+        "subtitle": "Fitness Check"
+      }
+    }
+  ]
+}

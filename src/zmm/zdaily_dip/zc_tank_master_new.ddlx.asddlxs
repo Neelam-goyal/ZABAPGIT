@@ -1,0 +1,209 @@
+@Metadata.layer: #PARTNER
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Plant'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Plant'
+annotate entity ZC_TANK_MASTER_NEW
+    with 
+{
+   
+  @EndUserText.label: 'Plant'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Plant'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Plant'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_Plant', element: 'Plant' } }]
+  Plant;
+  
+  @EndUserText.label: 'SAP Storage location'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'SAP Storage location'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'SAP Storage location'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+//   @Consumption.valueHelpDefinition: [{
+//    entity: { name: 'ZI_MATERIAL_VH_TM', element: 'StorageLocation' },
+//    additionalBinding: [{ localElement: 'Plant', element: 'p_Plant', usage: #FILTER, parameter: 'p_Plant' }] }]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_StorageLocation', element: 'StorageLocation' } }]
+   Tankno;                             //Storagelocation;
+   
+   
+  @EndUserText.label: 'Material'
+  @UI.identification: [ {
+    position: 21 , 
+    label: 'Material'
+  } ]
+  @UI.lineItem: [ {
+    position: 21 , 
+    label: 'Material'
+  } ]
+  @UI.selectionField: [ {
+    position: 21 
+  } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_PRODUCTSTORAGELOCATIONBASIC', element: 'Product' } }]
+//  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_MATERIAL_VH_TM', element: 'StorageLocationName' } }]
+   Product;              // Material;   
+  
+    @EndUserText.label: 'Material Description'
+  @UI.identification: [ {
+    position: 22 , 
+    label: 'Material Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 22 , 
+    label: 'Material Description'
+  } ]
+  @UI.selectionField: [ {
+    position: 22 
+  } ]
+   Materialdescription;      
+  
+  @EndUserText.label: 'Tank Description'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Tank Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Tank Description'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Storagelocationname;
+  
+  @EndUserText.label: 'Validity Start Date'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Validity Start Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Validity Start Date'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Validitystartdate;
+  
+  @EndUserText.label: 'Validit End Date'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Validit End Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Validit End Date'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Validityenddate;
+  
+  @EndUserText.label: 'Tank Max Cap MT'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Tank Max Cap MT'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Tank Max Cap MT'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  Tankmaximumcapacity;
+  
+  @EndUserText.label: 'Tank Safe Cap MT'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Tank Safe Cap MT'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Tank Safe Cap MT'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Tanksafecapacity;
+  
+  @EndUserText.label: 'Kg/cm'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Kg/cm'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Kg/cm'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  Capacitytype;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 100 
+//  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 110 
+//  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 120 
+//  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+//  @UI.selectionField: [ {
+//    position: 130 
+//  } ]
+  LastChangedAt;
+    
+}

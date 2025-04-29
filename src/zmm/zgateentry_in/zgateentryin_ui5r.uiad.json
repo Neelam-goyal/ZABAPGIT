@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Inward Gate Entry",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zgateentryin"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D50D777DA99340A7F9FA80DDA183F4022445BECD_TM",
+    "semanticObject": "zgateentryin",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D50D777DA99340A7F9FA80DDA183F4022445BECD_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Inward Gate Entry",
+        "subtitle": "zgateentry"
+      }
+    }
+  ]
+}

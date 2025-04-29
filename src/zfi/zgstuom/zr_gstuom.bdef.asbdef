@@ -1,0 +1,49 @@
+managed implementation in class ZBP_R_GSTUOM unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_GSTUOM alias ZrGstuom
+persistent table ZGSTUOM
+draft table ZGSTUOM_D
+etag master LastChangedAt
+lock master total etag LocalLastChangedAt
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Bukrs,
+   Uom;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( readonly : update )
+   Bukrs,
+   Uom;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZGSTUOM
+  {
+    Bukrs = bukrs;
+    Uom = uom;
+    Gstuom = gstuom;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

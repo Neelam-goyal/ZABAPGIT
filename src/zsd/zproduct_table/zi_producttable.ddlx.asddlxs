@@ -1,0 +1,39 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'ProductTable', 
+    typeNamePlural: 'ProductTables', 
+    title: {
+      type: #STANDARD, 
+      label: 'Product Table', 
+      value: 'Product'
+    }
+  }
+}
+annotate view ZI_ProductTable with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_ProductTable', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Product Table', 
+    position: 1 
+  } ]
+  Product;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'ProductDescription'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'ProductDescription'
+  } ]
+  ProductDescription;
+}

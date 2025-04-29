@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Material Description",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zproducttable"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_3AD3A9C724EB4616A0BD8C6FE4B0CF98DFDD61DD_TM",
+    "semanticObject": "zproduct_table_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_3AD3A9C724EB4616A0BD8C6FE4B0CF98DFDD61DD_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material Description",
+        "subtitle": "ZMAT_DESC"
+      }
+    }
+  ]
+}

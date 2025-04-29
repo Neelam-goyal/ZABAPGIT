@@ -1,0 +1,17 @@
+projection implementation in class ZRAPBP_C_PRODUCT_TABLE unique;
+strict ( 2 );
+use draft;
+define behavior for ZRAPC_PRODUCT_TABLE alias ZrapcProductTable
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+}

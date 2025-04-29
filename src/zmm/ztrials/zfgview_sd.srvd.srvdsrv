@@ -1,0 +1,4 @@
+@EndUserText.label: 'FG View SD'
+define service ZFGView_SD {
+  expose ZFGView;
+}

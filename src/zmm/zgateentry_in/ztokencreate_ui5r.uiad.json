@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Taken Create",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "ztokencreate"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_623861BEAFC22633828D04AFCCB2FF60E3C44937_TM",
+    "semanticObject": "ztokencreate",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_623861BEAFC22633828D04AFCCB2FF60E3C44937_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Taken Create",
+        "subtitle": "Create"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'SDS of Service Definition'
+define service ZSDS_DMR_REPO2 {
+  expose ZDMR_CDS_REPO;
+}

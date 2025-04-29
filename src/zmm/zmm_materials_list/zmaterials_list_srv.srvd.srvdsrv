@@ -1,0 +1,4 @@
+@EndUserText.label: 'Material List Service Defination'
+define service ZMaterials_list_srv {
+  expose ZMaterials_List_cds;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'ServiceDefinition of PurchaseRegisterNew'
+define service ZSD_PURCHASE_REG_NEW {
+  expose ZCDS_PURCHASE_REG_NEW;
+}

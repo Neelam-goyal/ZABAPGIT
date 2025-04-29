@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Material List",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zmateriallist"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_06109F8FCBA97AA46431F54C98C7EC121E324D9E_TM",
+    "semanticObject": "zmaterial_list_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_06109F8FCBA97AA46431F54C98C7EC121E324D9E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Material List",
+        "subtitle": "zmaterial_list"
+      }
+    }
+  ]
+}

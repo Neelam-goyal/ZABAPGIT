@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Create Token App",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "ztokencreatenew"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_E8EFFA64CF76669A8D0491ECB5E50F73E680F9F0_TM",
+    "semanticObject": "zso_createtokennew",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_E8EFFA64CF76669A8D0491ECB5E50F73E680F9F0_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Create Token App",
+        "subtitle": "ztoken"
+      }
+    }
+  ]
+}

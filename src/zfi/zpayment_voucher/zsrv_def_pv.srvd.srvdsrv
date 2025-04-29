@@ -1,0 +1,4 @@
+@EndUserText.label: 'service def for payment voucher'
+define service Zsrv_def_pv {
+  expose zcds_pay_voucher;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'SDS  Of Daily Maintenance Report'
+define service ZSDS_DMR_REPO {
+  expose ZDMR_CDS_REPO;
+}

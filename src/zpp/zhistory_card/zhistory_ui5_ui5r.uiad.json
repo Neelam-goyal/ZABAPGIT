@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "zhistory_card",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zhistorycardv4"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_0010EF4D3D8E76F5D54D7C7033EF2502967015D9_TM",
+    "semanticObject": "zhistroy_card_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_0010EF4D3D8E76F5D54D7C7033EF2502967015D9_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "zhistory_card",
+        "subtitle": "zhistory card report"
+      }
+    }
+  ]
+}

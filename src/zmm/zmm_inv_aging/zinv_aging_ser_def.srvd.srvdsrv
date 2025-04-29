@@ -1,0 +1,4 @@
+@EndUserText.label: 'Inventory Aging Service Defination'
+define service ZINV_AGING_SER_DEF {
+  expose ZInv_aging_cds;
+}

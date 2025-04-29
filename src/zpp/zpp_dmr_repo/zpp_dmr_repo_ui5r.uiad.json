@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZPM_DMR",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zppppdmr"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A004F5AE8832CC2A06FB5A335793F3F79D66962E_TM",
+    "semanticObject": "zpp_dmr_repo_so",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A004F5AE8832CC2A06FB5A335793F3F79D66962E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZPM_DMR",
+        "subtitle": "Daily Maintenance Report"
+      }
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+@Metadata.layer: #PARTNER
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Plant'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Plant'
+annotate entity ZC_DAILY_INPUT
+    with 
+{
+     @EndUserText.label: 'Plant'
+     @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ { position: 10 , label: 'Plant' } ]
+  @UI.lineItem: [ { position: 10 , label: 'Plant' } ]
+  @UI.selectionField: [ { position: 10 } ]
+//  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_TANK_MASTER_NEW', element: 'Plant' } }]
+    @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_TANK_MASTER_NEW', element: 'Plant' }, 
+    additionalBinding: [ 
+        { localElement: 'Plant',
+          element: 'Plant',
+          usage: #FILTER
+        },
+        { localElement: 'Product',
+          element: 'Product',
+          usage: #FILTER
+        },
+        { localElement: 'Product',
+          element: 'Product',
+          usage: #FILTER_AND_RESULT 
+        },
+        { localElement: 'Tankno',
+          element: 'Tankno',
+          usage: #FILTER_AND_RESULT 
+        },
+         { localElement: 'Tankdescription',
+          element: 'Storagelocationname',
+          usage: #FILTER_AND_RESULT 
+        },
+        { localElement: 'Tanksafecapacity',
+          element: 'Tanksafecapacity',
+          usage: #FILTER_AND_RESULT 
+        }
+    ] 
+}]
+  Plant;
+  
+  @EndUserText.label: 'Date'
+  @UI.identification: [ { position: 05 , label: 'Date' } ]
+  @UI.lineItem: [ { position: 20 , label: 'Date' } ]
+//  @UI.selectionField: [ { position: 05 } ]
+  Pdate;
+
+  @EndUserText.label: 'Product'
+  @UI.identification: [ { position: 30 , label: 'Product' } ]
+  @UI.lineItem: [ { position: 30 , label: 'Product' } ]
+  @UI.selectionField: [ { position: 30 } ]
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_TANK_MASTER_NEW', element: 'Product' } }]
+  Product;
+  
+  @EndUserText.label: 'SAP Tank No'
+  @UI.identification: [ { position: 40 , label: 'SAP Tank No' } ]
+  @UI.lineItem: [ { position: 40 , label: 'SAP Tank No' } ]
+  @UI.selectionField: [ { position: 40 } ]
+//  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_TANK_MASTER_NEW', element: 'Tankno' }, additionalBinding: [ 
+//        { localElement: 'Plant',
+//          element: 'Plant',
+//          usage: #FILTER
+//        },
+//        { localElement: 'Product',
+//          element: 'Product',
+//          usage: #FILTER
+//        },
+//        { localElement: 'Tankdescription',
+//          element: 'Storagelocationname',
+//          usage: #FILTER_AND_RESULT 
+//        },
+//        { localElement: 'Tanksafecapacity',
+//          element: 'Tanksafecapacity',
+//          usage: #FILTER_AND_RESULT 
+//        }
+//    ] 
+//}]
+////  @Consumption.valueHelpDefinition: [{ entity: { name: 'ZI_TANK_MASTER_NEW', element: 'Tankno' },
+////   additionalBinding: [ { 
+////                         localElement: 'Tankdescription',
+////                         element: 'Storagelocationname',
+////                         usage:#FILTER_AND_RESULT 
+////                         },
+////                       { 
+////                         localElement: 'Tanksafecapacity',
+////                         element: 'Tanksafecapacity',
+////                         usage:#FILTER_AND_RESULT 
+////                       }] } ]
+  Tankno;
+  
+    @EndUserText.label: 'Tank Description'
+  @UI.identification: [ { position: 50 , label: 'Tank Description' } ]
+  @UI.lineItem: [ { position: 50 , label: 'Tank Description' } ]
+//  @UI.selectionField: [ { position: 50 } ]
+  Tankdescription;
+  
+    @EndUserText.label: 'Tank Safe Cap MT'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Tank Safe Cap MT'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Tank Safe Cap MT'
+  } ]
+  Tanksafecapacity;
+  
+    @EndUserText.label: 'Tank Dip CM'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Tank Dip CM'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Tank Dip CM'
+  } ]
+  Tankdipcm; 
+
+    @EndUserText.label: 'Qty MT'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Qty MT'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Qty MT'
+  } ]
+  Qtymt;
+  
+      @EndUserText.label: 'Parcel to be Unloaded'
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Parcel to be Unloaded'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Parcel to be Unloaded'
+  } ]      
+  Parcelunloaded;
+  
+      @EndUserText.label: 'Qty to be Unloaded'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Qty to be Unloaded'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Qty to be Unloaded'
+  } ]
+  Qtyunloaded;
+  
+      @EndUserText.label: 'Total Available Stock'
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Total Available Stock'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 , 
+    label: 'Total Available Stock'
+  } ]
+  Totalavlstock;
+  
+      @EndUserText.label: 'Tank SAP Book Stock @Dip Time'
+  @UI.identification: [ {position: 120 , label: 'Tank SAP Book Stock @Dip Time'} ]
+  @UI.lineItem: [ {position: 120 , label: 'Tank SAP Book Stock @Dip Time'} ]
+//  @UI.selectionField: [ {position: 120 } ]
+    BookStock;              //Diptime;
+
+
+      @EndUserText.label: 'Variance'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Variance'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'Variance'
+  } ]
+  Variance;
+  
+  
+    @UI.identification: [ {
+    position: 140 
+  } ]
+  @UI.lineItem: [ {
+    position: 140 
+  } ]
+  CreatedBy;
+  
+  @UI.identification: [ {
+    position: 150 
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  CreatedAt;
+  
+  @UI.identification: [ {
+    position: 160 
+  } ]
+  @UI.lineItem: [ {
+    position: 160 
+  } ]
+  LastChangedBy;
+  
+  @UI.identification: [ {
+    position: 170 
+  } ]
+  @UI.lineItem: [ {
+    position: 170 
+  } ]
+  LastChangedAt;
+    
+}

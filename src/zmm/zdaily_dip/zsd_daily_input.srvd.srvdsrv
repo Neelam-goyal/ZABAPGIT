@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service Definition for Daily DIP Input'
+define service ZSD_DAILY_INPUT {
+  expose ZC_DAILY_INPUT;
+  expose ZC_TANK_MASTER_NEW;
+}

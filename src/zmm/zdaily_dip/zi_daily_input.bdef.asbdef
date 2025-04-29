@@ -1,0 +1,63 @@
+managed implementation in class zbp_i_daily_input unique;
+strict ( 2 );
+
+define behavior for ZI_DAILY_INPUT  alias DailyInput
+persistent table zdt_daily_input
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+//  field ( readonly ) Plant;
+
+   field ( mandatory : create )
+  Plant,  Pdate;
+
+  field ( readonly : update )
+  Plant,  Pdate;
+
+  field ( readonly : update )
+  Product, Tankno, Tankdescription, Tanksafecapacity;
+
+  field ( readonly ) BookStock, Qtymt, Totalavlstock, Variance, CreatedBy, CreatedAt, LastChangedBy, LastChangedAt;
+
+// Determinations
+  determination calculateQuantities on modify { field Tankdipcm, Qtyunloaded; }
+  determination updateBookStock on modify { field Plant, Product, Tankno; }
+  determination calculateParcelunloaded on modify { field Plant, Product, Tankno; }
+  determination calculateQtyunloaded on modify { field Plant, Product, Tankno; }
+//  determination getTankDetails on modify { field Plant, Product, Tankno; }
+
+
+// Validations
+  validation validatePdate on save { field Pdate; }
+//  validation validatePlant on save { field Plant; }
+//  validation validateTankno on save { field Tankno; }
+//  validation validateProduct on save { field Product; }
+
+  association _TankMaster; // { create; }
+
+  mapping for zdt_daily_input
+  {
+    Plant = plant;
+    Product = product;
+    Tankno = tankno;
+    Pdate = pdate;
+    Tankdescription = tankdescription;
+    Tanksafecapacity = tanksafecapacity;
+    Tankdipcm = tankdipcm;
+    Parcelunloaded = parcelunloaded;
+    Qtyunloaded = qtyunloaded;
+    Qtymt = qtymt;
+    Totalavlstock = totalavlstock;
+////    Diptime = diptime;
+    BookStock = bookstock;
+    Variance = variance;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+  }
+}

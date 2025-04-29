@@ -1,0 +1,4 @@
+@EndUserText.label: 'NEW SERVICE DEFINITION'
+define service ZSD_Daily_Dip_Report_NEW {
+  expose ZC_DAILY_DIP_REPORT;
+}

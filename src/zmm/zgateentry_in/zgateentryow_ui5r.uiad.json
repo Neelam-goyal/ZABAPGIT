@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Outward Gate Entry",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zgateentryout"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5826474FFC193205022A97DDBF767E7775A70143_TM",
+    "semanticObject": "zgateentryoutward",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5826474FFC193205022A97DDBF767E7775A70143_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Outward Gate Entry",
+        "subtitle": "zgateentryoutward"
+      }
+    }
+  ]
+}

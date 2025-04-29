@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "GST UOM",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zgstuom"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_66FC1D56AFBA503062A03178E489A2C2993A736B_TM",
+    "semanticObject": "zgst_uom_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_66FC1D56AFBA503062A03178E489A2C2993A736B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "GST UOM",
+        "subtitle": "ZUOM"
+      }
+    }
+  ]
+}

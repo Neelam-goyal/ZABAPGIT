@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_ProductTable_S'
+define service ZUI_PRODUCTTABLE {
+  expose ZI_PRODUCTTABLE_S as ProductTableAll;
+  expose ZI_PRODUCTTABLE as ProductTable;
+}

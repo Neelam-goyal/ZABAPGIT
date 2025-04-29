@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Tank Master NEW'
+define service ZSD_TANK_MASTER_NEW {
+  expose ZC_TANK_MASTER_NEW;
+}

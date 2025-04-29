@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Token Status",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "ztokenstatus"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_174F5A36B9377C472E6B41E647099507B242B330_TM",
+    "semanticObject": "ztokenstatus",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_174F5A36B9377C472E6B41E647099507B242B330_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Token Status",
+        "subtitle": "Status"
+      }
+    }
+  ]
+}

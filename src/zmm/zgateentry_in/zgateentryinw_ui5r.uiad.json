@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain Gate Entry",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "newmoduleui"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A2BECDC3C2C36E77A3871FD0D1E6137C27670126_TM",
+    "semanticObject": "ZGateEntry",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A2BECDC3C2C36E77A3871FD0D1E6137C27670126_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Maintain Gate Entry"
+      }
+    }
+  ]
+}

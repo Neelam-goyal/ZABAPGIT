@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Voucher Print FI",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zvoucherprint"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_B496E9F86F2CC5475DCC22133590341789550A0D_TM",
+    "semanticObject": "zvp_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_B496E9F86F2CC5475DCC22133590341789550A0D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Voucher Print FI",
+        "subtitle": "ZFI_VP"
+      }
+    }
+  ]
+}

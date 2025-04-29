@@ -1,0 +1,30 @@
+interface;
+
+define behavior for ZI_PMTADVHEADER alias PMTADVHEADER
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _PmtAmtBDSumm { create; }
+  use association _PmtAmtDeduct { create; }
+}
+
+define behavior for ZI_PMTADVBDSUMM alias PMTADVBDSUMM
+use etag
+{
+  use update;
+  use delete;
+
+  use association _PmtAdvHeader;
+}
+
+define behavior for ZI_PMTADVDEDUCT alias PMTADVDEDUCT
+use etag
+{
+  use update;
+  use delete;
+
+  use association _PmtAdvHeader;
+}

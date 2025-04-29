@@ -1,0 +1,168 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Deduction Summary', 
+    typeNamePlural: 'Deduction Summary', 
+    title: {
+      type: #STANDARD, 
+      label: 'Deduction Summary', 
+      value: 'Particulars'
+    }
+  }, 
+  presentationVariant: [ {
+    sortOrder: [ {
+      by: 'Particulars', 
+      direction: #DESC
+    } ], 
+    visualizations: [ {
+      type: #AS_LINEITEM
+    } ]
+  } ]
+}
+annotate entity ZC_PMTADVDEDUCT
+    with 
+{
+ @UI.facet: [ {
+    id: 'idDeductionSumm', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'GateEntryLines', 
+    position: 10 
+  } ]
+  
+  @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 10 , 
+    importance: #HIGH, 
+    label: 'Payment Advise'
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Payment Advise'   
+  } ]
+    PaymentAdviseNumber;
+    
+    @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 110 , 
+    importance: #HIGH, 
+    label: 'Item No'
+  } ]
+  @UI.identification: [ {
+    position: 110 , 
+    label: 'Item No'   
+  } ]
+    ItemNo;
+    
+     @UI.lineItem: [ {
+    position: 20 , 
+    importance: #HIGH, 
+    label: 'Particulars'
+  } ]
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Particulars'   
+  } ]
+    Particulars;
+    
+     @UI.lineItem: [ {
+    position: 30 , 
+    importance: #HIGH, 
+    label: 'Type'
+  } ]
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Type'   
+  } ]
+    Type;
+    
+     @UI.lineItem: [ {
+    position: 40 , 
+    importance: #HIGH, 
+    label: 'Condition Number'
+  } ]
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Condition Number'   
+  } ]
+    ConditionNumber;
+    
+     @UI.lineItem: [ {
+    position: 50 , 
+    importance: #HIGH, 
+    label: 'Actual'
+  } ]
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Actual'   
+  } ]
+    Actual;
+    
+     @UI.lineItem: [ {
+    position: 60 , 
+    importance: #HIGH, 
+    label: 'Final'
+  } ]
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Final'   
+  } ]
+    Final;
+    
+     @UI.lineItem: [ {
+    position: 70 , 
+    importance: #HIGH, 
+    label: 'Difference'
+  } ]
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Difference'   
+  } ]
+    Difference;
+    
+     @UI.lineItem: [ {
+    position: 80 , 
+    importance: #HIGH, 
+    label: 'Deduction Amount'
+  } ]
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Deduction Amount'   
+  } ]
+    DeductionAmount;
+    
+     @UI.lineItem: [ {
+    position: 90 , 
+    importance: #HIGH, 
+    label: 'Currency'
+  } ]
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Currency'   
+  } ]
+    @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CurrencyText', element: 'Currency' },
+                                        additionalBinding: [{ localElement: 'Currency',
+                                                              element: 'Currency' }
+                                                              ]
+                                    }]
+    Currency;
+    
+     @UI.hidden: true
+    CreatedBy;
+    @UI.hidden: true
+    CreatedAt;
+     @UI.hidden: true
+  @UI.lineItem: [ {
+    position: 100 , 
+    importance: #HIGH
+  } ]
+  @UI.identification: [ {
+    position: 100 
+  } ]
+    LastChangedBy;
+    @UI.hidden: true
+    LastChangedAt;  
+    @UI.hidden: true
+    LocalLastChangedAt;  
+    
+}

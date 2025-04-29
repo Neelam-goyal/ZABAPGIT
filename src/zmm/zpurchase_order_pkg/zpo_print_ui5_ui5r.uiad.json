@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "ZPO",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zpoprint"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_722C159C704F23DC68D18C446B66C70D37612CCF_TM",
+    "semanticObject": "ZPO_SO",
+    "action": "DISPLAY",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_722C159C704F23DC68D18C446B66C70D37612CCF_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "ZPO",
+        "subtitle": "ZMM_PO"
+      }
+    }
+  ]
+}

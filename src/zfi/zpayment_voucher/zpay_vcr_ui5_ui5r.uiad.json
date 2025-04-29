@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Payment Outgoing Voucher Print",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zpaymentvoucher"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_408CA981EE2172467BE3E0ADABD525866258ECA7_TM",
+    "semanticObject": "zvoucher_print_so",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_408CA981EE2172467BE3E0ADABD525866258ECA7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Payment Outgoing Voucher Print",
+        "subtitle": "zpog_print"
+      }
+    }
+  ]
+}

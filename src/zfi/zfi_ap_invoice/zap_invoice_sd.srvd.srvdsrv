@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definations for ZAP INVOICE'
+define service ZAP_INVOICE_SD {
+  expose ZAP_INVICE_DF;
+}

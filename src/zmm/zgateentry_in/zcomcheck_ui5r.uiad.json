@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Commercial Check",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zcommercialcheck"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_0D62B149697960A0F35F751CCA15ECCAB85FC1EE_TM",
+    "semanticObject": "zcommercialcheck",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_0D62B149697960A0F35F751CCA15ECCAB85FC1EE_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Commercial Check",
+        "subtitle": "Commercial Check"
+      }
+    }
+  ]
+}
